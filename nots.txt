@@ -1,0 +1,21 @@
+Developed a Bluetooth Device Finder using Python and Streamlit.
+Used PowerShell commands to retrieve paired Bluetooth devices from Windows.
+Displayed devices in a clean and user-friendly dashboard.
+Added Search functionality to quickly find Bluetooth devices.
+Automatically assigned icons based on the device type (speaker, headphones, phone, etc.).
+Implemented CSV export to download the device list.
+Used Python, Streamlit, Pandas, and the subprocess module.
+Designed the project to improve Python automation and Streamlit development skills.
+
+python -m venv venv
+.\venv\Scripts\Activate 
+pip install streamlit pandas
+pip install -r requirements.txt
+streamlit run app.py
+pip list
+Get-PnpDevice -Class Bluetooth | Select-Object FriendlyName | ConvertTo-Csv -NoTypeInformation
+Get-PnpDevice -Class Bluetooth
+Get-PnpDevice -Class Bluetooth | Select-Object FriendlyName
+python --version
+pip --version
+cd C:\Users\Dell\OneDrive\Desktop\Bluetooth
